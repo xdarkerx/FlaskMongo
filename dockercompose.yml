@@ -45,8 +45,6 @@ services:
   frontend:
     container_name: "node"
     build: ./frontend
-    environment:
-      - NODE_ENV=development
     volumes:
       - ./frontend:/frontend
     ports:
