@@ -1,0 +1,10 @@
+FROM node:lts-alpime
+
+WORKDIR /frontend
+
+COPY package.json /frontend/package.json
+COPY package-lock.json /frontend/package-lock.json
+RUN npm install
+RUN npm install @vue/cli@latest -g
+
+CMD ["npm", "run", "serve"]
